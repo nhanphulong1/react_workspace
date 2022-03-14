@@ -1,0 +1,22 @@
+.header{
+    background-color: #171b21;
+    position: relative;
+    height: 50px;
+    vertical-align: middle;
+    
+    h2{
+        margin-left: 25px;
+        color: white;
+        font-size: 35px;
+    }
+
+    .header-button{
+        position: absolute;
+        right: 5px;
+        top: 5px;
+
+        Button{
+            margin: 2px 5px;
+        }
+    }
+}

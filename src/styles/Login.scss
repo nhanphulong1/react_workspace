@@ -1,0 +1,70 @@
+$boder-input: 1px solid rgb(65, 65, 65);
+
+.content{
+    background-color: #0d1117;
+    display: flex;
+    height: 100vh;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+
+    img{
+        margin-bottom: 45px;
+    }
+    
+    .form-login {
+        background-color: #171b21;
+        border-radius: 5px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        width: 350px;
+        border: $boder-input;
+        padding: 15px;
+    
+        div{
+            text-align: left;
+            margin-bottom: 25px;
+    
+            div{
+                position: relative;
+                margin-bottom: 5px;
+                label{
+                    color: white;
+                    // font-weight: bolder;
+                }
+        
+                a{
+                    position: absolute;
+                    color: #66a2f2;
+                    text-decoration: none;
+                    right: 0px;
+                }
+            }
+    
+            input{
+                width: 100%;
+                padding: 0px 15px;
+                height: 35px;
+                background-color: black;
+                border: $boder-input;
+                border-radius: 6px;
+                color: white;
+            }
+    
+            Button{
+                width: 100%;
+                font-weight: bold;
+                // background-color: #438340;
+            }
+    
+            .showError{
+                margin-top: 10px;
+                // text-align: center;
+            }
+    
+        }
+
+        #div-login{
+            margin-bottom: 5px;
+        }
+    }
+}
