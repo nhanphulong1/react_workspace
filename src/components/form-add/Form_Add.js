@@ -30,7 +30,7 @@ const Form_Add = () => {
                 validate={values => {
                     const errors = {};
                     if (!values.name) {
-                        errors.name = 'Required';
+                        errors.name = 'Vui lòng nhập tên workspace!';
                     }
                     return errors;
                 }}
@@ -57,7 +57,7 @@ const Form_Add = () => {
                             onBlur={handleBlur}
                             value={values.name}
                         />
-                        {errors.name && touched.name && errors.name}
+                        <p className="text-danger">{errors.name && touched.name && errors.name}</p>
                         <button className="btn btn-primary" type="submit" disabled={isSubmitting}>
                             Add
                         </button>
