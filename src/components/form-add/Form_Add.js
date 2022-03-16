@@ -3,6 +3,7 @@ import { Formik } from 'formik';
 import { useNavigate } from 'react-router-dom';
 import "../../styles/FormAdd.scss";
 import axios from "axios";
+import { FormGroup } from "react-bootstrap";
 
 const Form_Add = () => {
     let url = "https://dev-api.hexabase.com/api/v0/workspaces";
@@ -30,7 +31,7 @@ const Form_Add = () => {
                 validate={values => {
                     const errors = {};
                     if (!values.name) {
-                        errors.name = 'Vui lòng nhập tên workspace!';
+                        errors.name = 'Vui lòng nhập tên work!';
                     }
                     return errors;
                 }}

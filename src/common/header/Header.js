@@ -7,8 +7,10 @@ const Header = () => {
     let navigate = useNavigate();
 
     const handleLogOut = () =>{
-        localStorage.removeItem("token");
-        navigate('/');
+        if(window.confirm('Bạn muốn đăng xuất khỏi tài khoản này!')){
+            localStorage.removeItem("token");
+            navigate('/');
+        }
     }
 
     const toAddForm=()=>{

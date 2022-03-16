@@ -1,9 +1,9 @@
 .content-form{
-    text-align: center;
+    // text-align: center;
     font-family: 'Times New Roman', Times, serif;
 
     h2{
-        // text-align: center;
+        text-align: center;
         color: red;
         font-weight: bold;
         font-size: 35px;
@@ -14,8 +14,11 @@
     form{
         margin: auto;
         width: 30%;
+        
+
         button{
-            margin-top: 10px;
+            display: block;
+            margin: 10px auto;
         }
     }
 }
