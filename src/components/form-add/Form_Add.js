@@ -3,6 +3,7 @@ import { Formik } from 'formik';
 import { useNavigate } from 'react-router-dom';
 import "../../styles/FormAdd.scss";
 import axios from "axios";
+import { FormGroup } from "react-bootstrap";
 
 const Form_Add = () => {
     let url = "https://dev-api.hexabase.com/api/v0/workspaces";
@@ -30,7 +31,7 @@ const Form_Add = () => {
                 validate={values => {
                     const errors = {};
                     if (!values.name) {
-                        errors.name = 'Required';
+                        errors.name = 'Không được bỏ trống dòng này!';
                     }
                     return errors;
                 }}
@@ -49,15 +50,20 @@ const Form_Add = () => {
                     isSubmitting,
                 }) => (
                     <form onSubmit={handleSubmit}>
-                        <input
-                            className="form-control"
-                            type="text"
-                            name="name"
-                            onChange={handleChange}
-                            onBlur={handleBlur}
-                            value={values.name}
-                        />
-                        {errors.name && touched.name && errors.name}
+                        <FormGroup>
+                            <label>Tên workspace:</label>
+                            <input
+                                className="form-control"
+                                type="text"
+                                name="name"
+                                onChange={handleChange}
+                                onBlur={handleBlur}
+                                value={values.name}
+                            />
+                            <p className="text-danger">
+                                {errors.name && touched.name && errors.name}
+                            </p>
+                        </FormGroup>
                         <button className="btn btn-primary" type="submit" disabled={isSubmitting}>
                             Add
                         </button>
